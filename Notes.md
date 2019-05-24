@@ -24,3 +24,17 @@ cd *path to public folder*;
    yarn run webpack --mode=production;
 ``` 
 - reference this file on the 'run powershell on target machines' task in the script file path
+
+
+#  Pass a parameter to a partial
+
+- Add the parameter into the call using the syntax below:
+
+```
+   @Html.Partial("path/to/_partial", new ViewDataDictionary{{"variableName", value}})
+```
+
+- Refer to the variable in the partial like so:
+```
+   <h2>@ViewData["variableName"]</h2>
+```
