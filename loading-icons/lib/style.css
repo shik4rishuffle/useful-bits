@@ -1,0 +1,49 @@
+.square {
+    position: relative;
+}
+
+.example1 {
+    width: 100px;
+    height: 100px;
+    background: rgba(23, 344, 11, 0.5);
+}
+
+.example2 {
+    width: 500px;
+    height: 300px;
+    background: rgba(233, 314, 12, 0.5);
+}
+
+.example3 {
+    width: 150px;
+    height: 250px;
+    background: rgba(232, 34, 11, 0.5);
+}
+
+.loading::after {
+    position: absolute;
+    display: flex;
+    content: url(../img/loadingSpinner.png);
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation-name: load-spin;
+    -moz-animation-name: load-spin;
+    -o-animation-name: load-spin;
+    animation-name: load-spin;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes load-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
